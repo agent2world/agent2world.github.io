@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Tree-Planner: Efficient Close-loop Task Planning with Large Language Models">
+  <meta name="keywords" content="Embodied AI, AI Agents, Large Language Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tree-Planner: Efficient Close-loop Task Planning with Large Language Models</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://scholar.google.com.hk/citations?user=FhVRimUAAAAJ&hl=zh-CN&oi=ao">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://embodiedgpt.github.io/">
+            EmbodiedGPT
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Tree-Planner: Efficient Close-loop Task Planning with Large Language Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?user=FhVRimUAAAAJ&hl=zh-CN&oi=ao">Mengkang Hu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://yaomarkmu.github.io/">Yao Mu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=yflYWnYAAAAJ&hl=zh-CN">Xinmiao Yu</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://dingmyu.github.io/">Mingyu Ding</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=2sMrpy4AAAAJ">Shiguang Wu</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://wqshao126.github.io/">Wenqi Shao</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=8j8AfF0AAAAJ&hl=en&oi=ao">Qiguang Chen</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=KWZG_YsAAAAJ">Bin Wang</a><sup>3</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=en">Yu Qiao</a><sup>4</sup>
+            </span>
+            <span class="author-block">
+              <a href="http://luoping.me/">Ping Luo</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>The University of Hong Kong,</span>
+            <span class="author-block"><sup>2</sup>Harbin Institute of Technology</span>
+            <span class="author-block"><sup>3</sup>Noah’s Ark Laboratory,</span>
+            <span class="author-block"><sup>4</sup>Shanghai AI Laboratory</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2310.08582.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2310.08582"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.bilibili.com/video/BV1VJ4m1H73a/?spm_id_from=333.337.search-card.all.click&vd_source=89699b79fd78fb180946601de99a1787"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Video</span>
+                  </a>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Aaron617/tree-planner"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        An overview of <span class="dnerf">Tree-Planner</span> of three stages: <br>
+        <em><font color="#00BFFF">Plan Sampling</font></em> prompts the LLM to sample potential task plans with its inherent commonsense. <br>
+        <em><font color="#1E90FF">Action Tree Construction</font></em>  aggregates the sampled plans.
+        <em><font color="#4169E1">Grounded Deciding</font></em> instructs the LLM again in closed loops to reason on the action tree with the environmental observation.
+      </h2>
+      <img src="static/images/main.png"> <!-- To .gif format-->
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This paper studies close-loop task planning, which refers to the process of generating a sequence of skills (a plan) to accomplish a specific goal while adapting the plan based on real-time observations.
+          </p>
+          <p>
+            Recently, prompting Large Language Models (LLMs) to generate actions iteratively has become a prevalent paradigm due to its superior performance and user-friendliness.
+            However, this paradigm is plagued by two inefficiencies: high token consumption and redundant error correction, both of which hinder its scalability for large-scale testing and applications.
+          </p>
+          <p>
+            To address these issues, we propose Tree-Planner, which reframes task planning with LLMs into three distinct phases: 
+            plan sampling,  action tree construction, and grounded deciding.
+          </p>
+          <p>
+            Tree-Planner starts by using an LLM to sample a set of potential plans before execution, followed by the aggregation of them to form an action tree.
+            Finally, the LLM performs a top-down decision-making process on the tree, taking into account real-time environmental information.
+          </p>
+          <p>
+            Experiments show that Tree-Planner achieves state-of-the-art performance while maintaining high efficiency.
+            By decomposing LLM queries into a single plan-sampling call and multiple grounded-deciding calls,
+            a considerable part
+            of the prompt are less likely to be repeatedly consumed. 
+            As a result, token consumption is reduced by 92.2% compared to the previously best-performing model.
+            Additionally, by enabling backtracking on the action tree as needed, the correction process becomes more flexible, leading to a 40.5% decrease in error corrections.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@article{hu2023tree,
+  title={Tree-Planner: Efficient Close-loop Task Planning with Large Language Models},
+  author={Hu, Mengkang and Mu, Yao and Yu, Xinmiao and Ding, Mingyu and Wu, Shiguang and Shao, Wenqi and Chen, Qiguang and Wang, Bin and Qiao, Yu and Luo, Ping},
+  journal={arXiv preprint arXiv:2310.08582},
+  year={2023}
+}
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
