@@ -1,16 +1,11 @@
-# Tree-Planner
+# Agent2World
 
-This is the repository that contains source code for the [Tree-Planner website](https://tree-planner.github.io).
-The source code is borrowed from [Nefies website](https://nerfies.github.io/)
+This repository contains the source code for the [Agent2World website](https://agent2world.github.io).
+The source code is adapted from the [Nerfies website](https://nerfies.github.io).
 
-If you find Tree-Planner useful for your work please cite:
+If you find Agent2World useful for your work, please cite:
 ```
-@article{hu2023tree,
-  title={Tree-Planner: Efficient Close-loop Task Planning with Large Language Models},
-  author={Hu, Mengkang and Mu, Yao and Yu, Xinmiao and Ding, Mingyu and Wu, Shiguang and Shao, Wenqi and Chen, Qiguang and Wang, Bin and Qiao, Yu and Luo, Ping},
-  journal={arXiv preprint arXiv:2310.08582},
-  year={2023}
-}
+wait for the paper
 ```
 
 # Website License
