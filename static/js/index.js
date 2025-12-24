@@ -26,6 +26,8 @@ $(document).ready(function() {
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
       $(".navbar-burger").toggleClass("is-active");
       $(".navbar-menu").toggleClass("is-active");
+      var expanded = $(".navbar-burger").hasClass("is-active");
+      $(".navbar-burger").attr("aria-expanded", expanded ? "true" : "false");
 
     });
 
